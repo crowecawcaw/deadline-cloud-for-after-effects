@@ -77,7 +77,10 @@
                         "args": [
                             "{{Param.JobScriptDir}}/font_manager.py",
                             "install",
-                            "{{Session.WorkingDirectory}}"
+                            "--has-path-mapping-rules",
+                            "{{Session.HasPathMappingRules}}",
+                            "--path-mapping-rules-file",
+                            "{{Session.PathMappingRulesFile}}"
                         ]
                     },
                     "onExit": {
@@ -85,7 +88,10 @@
                         "args": [
                             "{{Param.JobScriptDir}}/font_manager.py",
                             "remove",
-                            "{{Session.WorkingDirectory}}"
+                            "--has-path-mapping-rules",
+                            "{{Session.HasPathMappingRules}}",
+                            "--path-mapping-rules-file",
+                            "{{Session.PathMappingRulesFile}}"
                         ]
                     }
                 }
